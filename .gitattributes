@@ -1,2 +1,29 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+#bash
+cd n scripts]
+#bash
+#!/bin/bash
+echo"digite o primeiro número:"
+read num 1
+echo"digite o segundo número:"
+echo"Escolha a operação:"
+echo"1.soma"
+echo"2.subtração"
+echo"3.multiplicação"
+echo"4.divisão"
+read opcao
+case $opcao in
+resultado= $(( $num1+$num2))
+resultado= $(( $num1-$num2))
+ii
+resultado= $(( $num*num2))
+ii
+if [$num2-eq 0; then
+echo " divisão por zero não é permitida."
+else
+    resultado=$ (($num1/$num2))
+fi
+
+echo "opção inválida"
+
+esac
+echo "Resultado: $resultado
