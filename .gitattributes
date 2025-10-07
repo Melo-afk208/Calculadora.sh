@@ -1,29 +1,41 @@
-#bash
-cd n scripts]
-#bash
-#!/bin/bash
-echo"digite o primeiro número:"
-read num 1
-echo"digite o segundo número:"
-echo"Escolha a operação:"
-echo"1.soma"
-echo"2.subtração"
-echo"3.multiplicação"
-echo"4.divisão"
-read opcao
-case $opcao in
-resultado= $(($num1+$num2))
-resultado= $(($num1-$num2))
-ii
-resultado= $(($num*num2))
-ii
-if [$num2-eq 0; then
-echo " divisão por zero não é permitida."
-else
-    resultado=$ (($num1/$num2))
-fi
+# calculadora.py
 
-echo "opção inválida"
+# Solicita os números ao usuário
+num1 = float(input("Digite o primeiro número: "))
+num2 = float(input("Digite o segundo número: "))
 
-esac
-echo "Resultado: $resultado
+# Exibe o menu de operações
+print("\nEscolha a operação:")
+print("1. Soma")
+print("2. Subtração")
+print("3. Multiplicação")
+print("4. Divisão")
+
+# Lê a opção
+opcao = input("Opção: ")
+
+# Realiza a operação escolhida
+if opcao == "1":
+    resultado = num1 + num2
+    operacao = "Soma"
+elif opcao == "2":
+    resultado = num1 - num2
+    operacao = "Subtração"
+elif opcao == "3":
+    resultado = num1 * num2
+    operacao = "Multiplicação"
+elif opcao == "4":
+    if num2 == 0:
+        print("Erro: divisão por zero não é permitida.")
+        resultado = None
+    else:
+        resultado = num1 / num2
+        operacao = "Divisão"
+else:
+    print("Opção inválida.")
+    resultado = None
+
+# Mostra o resultado final
+if resultado is not None:
+    print(f"\nResultado da {operacao}: {resultado}")
+
