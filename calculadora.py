@@ -1,0 +1,40 @@
+
+
+# Solicita os números ao usuário
+num1 = float(input("Digite o primeiro número: "))
+num2 = float(input("Digite o segundo número: "))
+
+# Exibe o menu de operações
+print("\nEscolha a operação:")
+print("1. Soma")
+print("2. Subtração")
+print("3. Multiplicação")
+print("4. Divisão")
+
+# Lê a opção
+opcao = input("Opção: ")
+
+# Realiza a operação escolhida
+if opcao == "1":
+    resultado = num1 + num2
+    operacao = "Soma"
+elif opcao == "2":
+    resultado = num1 - num2
+    operacao = "Subtração"
+elif opcao == "3":
+    resultado = num1 * num2
+    operacao = "Multiplicação"
+elif opcao == "4":
+    if num2 == 0:
+        print("Erro: divisão por zero não é permitida.")
+        resultado = None
+    else:
+        resultado = num1 / num2
+        operacao = "Divisão"
+else:
+    print("Opção inválida.")
+    resultado = None
+
+# Mostra o resultado final
+if resultado is not None:
+    print(f"\nResultado da {operacao}: {resultado}")
