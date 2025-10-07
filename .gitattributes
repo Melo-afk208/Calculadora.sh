@@ -12,10 +12,10 @@ echo"3.multiplicação"
 echo"4.divisão"
 read opcao
 case $opcao in
-resultado= $(( $num1+$num2))
-resultado= $(( $num1-$num2))
+resultado= $(($num1+$num2))
+resultado= $(($num1-$num2))
 ii
-resultado= $(( $num*num2))
+resultado= $(($num*num2))
 ii
 if [$num2-eq 0; then
 echo " divisão por zero não é permitida."
